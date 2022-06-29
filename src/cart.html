@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cart</title>
+    <title>Shop cart</title>
 </head>
 <body>
     <header class="header">
@@ -12,7 +12,7 @@
             Techno-shop | Онлайн-магазин гаджетов
         </h1>
         <div class="container">
-           <a href="/">
+           <a href="index.html">
             <img class="header__logo" src="./img/logo.svg" alt="Логотип Tehno Shop">
            </a>
             <form class="header__search search">
@@ -39,6 +39,148 @@
             </div>
         </div>
     </header>
+    <main class="main">
+        <section class="cart">
+            <h2 class="visually-hidden">Корзина</h2>
+
+            <div class="container cart__container">
+               
+                <section class="cart-goods">
+                    <h3 class="cart-goods__title">Корзина</h3>
+                    <ul class="cart-goods__list">
+                        <li class="cart-goods__item item">
+                            <img src="img/cart_1.jpg" alt="" class="item__img">
+                            <div class="item__detail">
+                                <h4 class="item__title">Монитор AOC 24G2U/BK</h4>
+                                <p class="item__vendor-code">Артикул: 654651968</p>
+                            </div>
+                            <div class="item__control">
+                                <div class="item__count">
+                                    <button class="item__btn item__btn_dec">–</button>
+                                    <output class="item__number">1</output>
+                                    <button class="item__btn item__btn_inc">+</button>
+                                </div>
+                                <p class="item__price">20799 ₽</p>
+                                <button class="item__remove-cart">
+                                    <svg>
+                                        <use href="#remove" />
+                                    </svg>
+                                    
+                                </button>
+                            </div>
+                        </li>
+                        <li class="cart-goods__item item">
+                            <img src="img/cart_2.jpg" alt="" class="item__img">
+                            <div class="item__detail">
+                                <h4 class="item__title">Смарт-часы CANYON Lollypop</h4>
+                                <p class="item__vendor-code">Артикул: 654675757</p>
+                            </div>
+                            <div class="item__control">
+                                <div class="item__count">
+                                    <button class="item__btn item__btn_dec">–</button>
+                                    <output class="item__number">1</output>
+                                    <button class="item__btn item__btn_inc">+</button>
+                                </div>
+                                <p class="item__price">12479 ₽ </p>
+                                <button class="item__remove-cart">
+                                    <svg>
+                                        <use href="#remove" />
+                                    </svg>
+                                    
+                                </button>
+                            </div>
+                        </li>
+                        <li class="cart-goods__item item">
+                            <img src="img/cart_3.jpg" alt="" class="item__img">
+                            <div class="item__detail">
+                                <h4 class="item__title">Смарт-приставка Selenga R1</h4>
+                                <p class="item__vendor-code">Артикул: 724651960</p>
+                            </div>
+                            <div class="item__control">
+                                <div class="item__count">
+                                    <button class="item__btn item__btn_dec">–</button>
+                                    <output class="item__number">1</output>
+                                    <button class="item__btn item__btn_inc">+</button>
+                                </div>
+                                <p class="item__price">7944 ₽</p>
+                                <button class="item__remove-cart">
+                                    <svg>
+                                        <use href="#remove" />
+                                    </svg>
+                                    
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                <section class="cart__address address">
+                    <h3 class="cart__title">Адрес доставки</h3>
+
+                    <form class="address__form">
+                        <label> 
+                            <select class="address__item address__item_select" name="city" >
+                                <option value="" disabled selected>Город</option>
+                                <option value="Moscow">Москва</option>
+                                <option value="St.Petersburg">Санкт-Петербург</option>
+                                <option value="Saratov">Саратов</option>
+                                <option value="Khabarovsk">Хабаровск</option>
+                                <option value="Kazan">Казань</option> 
+                            </select>
+                        </label>
+                       
+                        <label><input placeholder="Улица, дом" class="address__item" type="text"></label>
+                        <label><input placeholder="Квартира" class="address__item" type="text"></label>
+                        <label><input placeholder="ФИО" class="address__item" type="text"></label>
+                        <label><input placeholder="Индекс" class="address__item" type="text"></label>
+                        <button class="address__item address__item_btn">Сохранить</button>
+                        <label class="address__label-save">
+                            <input type="checkbox" name="save-address">Запомнить этот адрес
+                        </label>
+
+                       
+                    </form>
+                </section>
+                <section class="cart__total">
+                    <h3 class="visually-hidden">Итог</h3>
+                    <ul class="total__table">
+                        <li class="total__row total__row-header">
+                            <span>Итого</span>
+                            <span>41 222 ₽</span>
+                        </li>
+                        <li class="total__row total__row-grey">
+                            <span>Товары, 3 шт.</span>
+                            <span>41 222 ₽</span>
+                        </li>
+                        <li class="total__row total__row-grey">
+                            <span>Скидка</span>
+                            <span>0 ₽</span>
+                        </li>
+                        <li class="total__row total__row-grey">
+                            <span>Доставка</span>
+                            <span>0 ₽</span>
+                        </li>
+                        <li class="total__row">
+                            <span>Дата</span>
+                            <span>01 - 03 июля</span>
+                        </li>
+                        <li class="total__row">
+                            <span>Оплата</span>
+                            <span>Картой</span>
+                        </li>
+                    </ul>
+                    <div class="total__order">
+                        <button class="total__submit">Оформить заказ</button>
+
+                        <label class="total__agree">
+                            <input type="checkbox" name="agree">
+                            <span>Согласен <a class="total__agree-link" href="#">с условиями</a> правил пользования торговой площадкой и&nbsp;правилами возврата </span>
+                        </label>
+                    </div>
+                 
+                </section>   
+            </div>
+        </section>
+    </main>
     <footer class="footer">
         <h2 class="visually-hidden">
             Подвал сайта
@@ -108,6 +250,12 @@
             </div> 
         </div>
     </footer>
-    
+
+    <svg style="display:none"  width="32" height="33">
+        <symbol id="remove" viewbox="0 0 32 33" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M25.3337 9.04667L23.4537 7.16667L16.0003 14.62L8.54699 7.16667L6.66699 9.04667L14.1203 16.5L6.66699 23.9533L8.54699 25.8333L16.0003 18.38L23.4537 25.8333L25.3337 23.9533L17.8803 16.5L25.3337 9.04667Z"/>
+        </symbol>
+    </svg>
+        
 </body>
 </html>
