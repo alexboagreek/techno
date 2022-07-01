@@ -1,0 +1,10 @@
+.social {
+    display: flex;
+    gap: 20px;
+    &__link {
+        transition: color 0.4s ease-in-out;
+        &:hover {
+            color: #04E277;;
+        }
+    }
+}
