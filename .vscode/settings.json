@@ -70,5 +70,6 @@
     "GONFIG",
     "Selenga",
     "Tehno"
-  ]
+  ],
+  "liveServer.settings.port": 5501
 }
