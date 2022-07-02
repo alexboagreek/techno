@@ -167,11 +167,36 @@
                                     </div>
                                 </article>
                             </li>
+                            <li class="goods__item">
+                                <article class="goods-item">
+                                    <a href="card.html" class="">
+                                        <img class="goods-item__image" src="img/laptop.jpg" alt="laptop image techno shop">
+                                        <h3 class="goods-item__title">Монитор AOC 24G2U/BK</h3>
+                                    </a>
+                                    <div class="goods-item__buy">
+                                        <p class="goods-item__price">20799 ₽</p>
+                                        <button class="goods-item__to-cart">В корзину</button>
+                                    </div>
+                                </article>
+                            </li>
+                            <li class="goods__item">
+                                <article class="goods-item">
+                                    <a href="card.html" class="">
+                                        <img class="goods-item__image" src="img/laptop.jpg" alt="laptop image techno shop">
+                                        <h3 class="goods-item__title">Монитор AOC 24G2U/BK</h3>
+                                    </a>
+                                    <div class="goods-item__buy">
+                                        <p class="goods-item__price">20799 ₽</p>
+                                        <button class="goods-item__to-cart">В корзину</button>
+                                    </div>
+                                </article>
+                            </li>
                         </ul>
                     </div>
                     <aside class="catalog__filter filter">
                         <form class="filter__form">
                             <h3 class="filter__title">Фильтры</h3>
+                          <div class="filter__fields-list">
                             <fieldset class="filter__field">
                                 <legend class="filter__field-title">Цена</legend>
                                 <div class="filter__flex">
@@ -182,7 +207,7 @@
                             <fieldset class="filter__field">
                                 <legend class="filter__field-title">Категория</legend>
                                 <label>
-                                    <select class="filter__select" name="category">
+                                    <select class="filter__input filter__input_select" name="category">
                                         <option value="phone">Смартфоны</option>
                                         <option value="tab">Планшеты</option>
                                         <option value="watch">Умные часы</option>
@@ -200,7 +225,8 @@
                             </fieldset>
                             <fieldset class="filter__field">
                                 <legend class="filter__field-title">Цвет</legend>
-                                <div class="filter__flex">
+
+                                <div class="filter__flex filter__flex_output filter__flex_column">
                                    <label>
                                     <input type="checkbox" name="color" value="white" class="filter__checkbox">Белый
                                    </label>
@@ -222,6 +248,7 @@
                                    </label>
                                 </div>
                             </fieldset>
+                          </div>
                             <button class="filter__apply" type="submit">Применить фильтр </button>
                             <button class="filter__reset" type="reset">Очистить все</button>
                         </form>
