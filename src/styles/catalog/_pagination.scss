@@ -1,0 +1,18 @@
+.pagination__list {
+    display: flex;
+    justify-content: center;
+
+  
+}
+.pagination__link {
+    width: 36px;
+    height: 36px;
+    padding: 6px 15px;
+    margin-right: 36px;
+
+    &_active {
+        border: 2px solid #04E277;
+    }
+   
+}
+
