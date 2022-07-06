@@ -8,6 +8,23 @@ import './index.scss';
 import Swiper, { Thumbs, Scrollbar } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/scrollbar';
+import { pagination } from './modules/pagination';
+
+
+
+const paginationWrapper = document.querySelector('.pagination');
+
+const pageURL = new URL(location); 
+
+const page = +pageURL.searchParams.get('page') || 1;
+
+try {
+    pagination(paginationWrapper, 20, page, 6);
+} catch (error) {
+    console.warn(error);
+    console.warn('Это не главная страница');
+}
+
 
 const thumbSwiper = new Swiper('.card__slider-thumb', {
     spaceBetween: 44,
