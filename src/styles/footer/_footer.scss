@@ -52,4 +52,19 @@
         line-height: 130%;
         margin-bottom: 40px;
     }
+
+    &__copyright {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 130%;
+
+    }
+    &__design {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 130%;
+    }
 }

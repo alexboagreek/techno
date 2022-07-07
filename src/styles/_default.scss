@@ -68,13 +68,42 @@ html {
   }
   
   .container {
+
     max-width: 1880px;
     padding: 0 30px;
     margin: 0 auto;
+
+    @include  desktop {
+      max-width: 1480px;
+    }
+
+    @include laptop {
+      max-width: 1000px;
+      padding: 0 15px;
+    }
+
+    @include tablet {
+      max-width: 670px;
+    }
+
+    @include mobile {
+      max-width: 320px;
+      padding: 10px;
+    }
+
   }
   
   .main {
     padding: 44px 0 120px 0;
+    
+    @include tablet {
+      padding-top: 24px;
+      padding-bottom: 80px;
+    }
+
+    @include mobile {
+      padding: 35px;
+    }
   } 
   section {
     padding: 50px 0;
