@@ -1,14 +1,52 @@
 .footer {
+
     background-color: #272727;
     padding: 80px 0;
     color: #fff;
+
+
     &__container {
         display: grid;
         grid-template-columns: 1fr 2fr 1fr 1fr;
         gap: 30px;
+        grid-template-areas:  
+        "logo catalog customer contacts"
+        "copyright . . design";
+
+
+        @include laptop {
+            grid-template-columns: 395px 235px 280px;
+            grid-template-areas: 
+            "logo . ." 
+            "catalog customer contacts"
+            "copyright . design";
+        }
+
+        @include tablet {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+            "logo ." 
+            "catalog customer"
+            "catalog contacts"
+            "copyright design";
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            "logo" 
+            "catalog"
+            "customer"
+            "contacts"
+            "copyright"
+            "design";
+        }
     }
+
+
     &__logo-link {
         place-self: start;
+        grid-area: logo;
     }
     &__logo {
         width: 146px;
@@ -19,8 +57,17 @@
         font-size: 22px;
         line-height: 150%;
 
+        @include mobile {
+            font-size: 14px;
+            line-height: 17px;
+        }
+
         &_double {
             column-count: 2;
+
+            @include tablet {
+                column-count: auto;
+            }
 
         }
         &_contacts {
@@ -43,23 +90,46 @@
     &__link {
         transition: color 0.4s ease-in-out;
         &:hover {
-            color: #04E277;;
+            color: $color-main;
         }
     }
+
+    &__catalog {
+        grid-area: catalog;
+    }
+
+    &__customer {
+        grid-area: customer;
+    }
+
+    &__contacts {
+        grid-area: contacts;
+    }
+
+
+
+
     &__column-title {
         font-weight: 700;
         font-size: 32px;
         line-height: 130%;
         margin-bottom: 40px;
+
+        @include mobile {
+            font-size: 20px;
+            line-height: 130%;
+        }
     }
 
     &__copyright {
+        grid-area: copyright;
         font-weight: 500;
         font-size: 16px;
         line-height: 130%;
 
     }
     &__design {
+        grid-area: design;
         display: flex;
         flex-direction: column;
         gap: 10px;

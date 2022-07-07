@@ -30,7 +30,9 @@
     }
     &__flex {
         display: flex;
+        justify-content: space-between;
         gap: 10px;
+
 
         &_column {
             flex-direction: column;
@@ -47,6 +49,10 @@
         height: 38px;
         border: 1px solid $color-primary;
 
+        @include laptop {
+           width: 145px;
+        }
+
         &_select {
             width: 100%;
             color: $color-grey;
@@ -56,6 +62,7 @@
             color: $color-grey;
         }
 
+    
     }
    
     &__checkbox {

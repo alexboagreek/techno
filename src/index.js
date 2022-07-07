@@ -18,8 +18,33 @@ const pageURL = new URL(location);
 
 const page = +pageURL.searchParams.get('page') || 1;
 
+let isMobile = false;
+
+const startPagination = () => {
+    if (window.innerWidth < 560) {
+        pagination(paginationWrapper, 20, page, 4);
+        let isMobile = true;
+    } else {
+        pagination(paginationWrapper, 20, page, 6);
+        let isMobile = false;
+    }
+}
+
 try {
-    pagination(paginationWrapper, 20, page, 6);
+    startPagination();
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth <= 560 && !isMobile) {
+         
+            pagination(paginationWrapper, 20, page, 4);
+            let isMobile = true;
+        }
+        if (window.innerWidth > 560 && isMobile)  {
+          
+            pagination(paginationWrapper, 20, page, 6);
+            let isMobile = false;
+        }
+    })
 } catch (error) {
     console.warn(error);
     console.warn('Это не главная страница');
