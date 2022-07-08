@@ -19,4 +19,23 @@
             gap: 10px;
         }
     } 
+
+    &__preload {
+        grid-column: 1 / 5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            transform: rotate(0);
+            animation: rotation 8.8s infinite linear;
+        }
+    }
+
+
+    @keyframes rotation {
+       to {
+        transform: rotate(360deg);
+       }
+    }
 }

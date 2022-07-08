@@ -16,7 +16,7 @@ const createItemPagination = (hrefLink, textContent, active) => {
 }
 
 
-export const pagination = (wrapper, pages, page, count ) => {
+const pagination = (wrapper, pages, page, count ) => {
     wrapper.textContent = '';
 
     const paginationList = document.createElement('ul');
@@ -54,3 +54,29 @@ export const pagination = (wrapper, pages, page, count ) => {
     
     wrapper.append(firstItem, paginationList, lastItem);
 } 
+
+
+export const startPagination = (paginationWrapper, pages, page) => {
+    let isMobile = false;
+
+    if (window.innerWidth < 560) {
+        pagination(paginationWrapper, pages, page, 4);
+        let isMobile = true;
+    } else {
+        pagination(paginationWrapper, pages, page, 6);
+        let isMobile = false;
+    }
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth <= 560 && !isMobile) {
+         
+            pagination(paginationWrapper, 20, page, 4);
+            let isMobile = true;
+        }
+        if (window.innerWidth > 560 && isMobile)  {
+          
+            pagination(paginationWrapper, 20, page, 6);
+            let isMobile = false;
+        }
+    })
+}
