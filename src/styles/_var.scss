@@ -37,4 +37,9 @@ $mobile: 560px;
     }
 }
 
+@keyframes rotation {
+    to {
+     transform: rotate(360deg);
+    }
+ }
 

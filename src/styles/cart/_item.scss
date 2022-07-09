@@ -1,11 +1,34 @@
 .item {
     display: flex;
     align-items: flex-start;
+
+    @include mobile {
+        position: relative;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-right: 18px;
+        gap: 20px 18px;
+    }
+
     &__img {
         width: 200px;
-        height: 200px;
         object-fit: cover;
         margin-right: 30px;
+
+
+        @include desktop {
+            width: 137px;
+            margin-right: 8px;
+        }
+
+        @include tablet {
+            width: 104px;
+            margin-right: 18px;
+        }
+
+        @include mobile {
+            margin-right: 0;
+        }
     }
     &__detail {
         display: flex;
@@ -13,6 +36,20 @@
         margin-right: 35px;
         flex-direction: column;
         padding-top: 28px;
+
+        @include desktop {
+            flex-basis: 320px;
+        }
+
+        @include tablet {
+            flex-basis: 160px;
+            margin-right: 7px;
+            padding-top: 0;
+        }
+
+        @include mobile {
+            margin-right: 0;
+        }
 
     }
     &__title {
@@ -22,27 +59,51 @@
         font-size: 22px;
         line-height: 27px;
 
+        @include desktop {
+            min-height: auto;
+        }
+
+        @include tablet {
+            font-size: 16px;
+            line-height: 20px;
+            margin-bottom: 12px;
+        }
+
     }
+
     &__vendor-code {
         font-weight: 500;
         font-size: 18px;
         line-height: 22px;
+
+        @include tablet {
+            font-size: 12px;
+            line-height: 15px;
+        }
     }
+
     &__control {
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-grow: 1;
         align-self: center;
+        gap: 10px;
+
+        @include mobile {
+            justify-content: flex-start;
+            margin-right: 39px;
+        }
 
     }
     &__count {
+        width: 100%;
         max-width: 120px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 100%;
-        margin-right: 70px;
+        gap: 10px;
+
     }
     &__btn {
         width: 34px;
@@ -52,18 +113,35 @@
         font-size: 30px;
         line-height: 100%;
     }
+
     &__number {
         font-size: 30px;
         line-height: 37px;
+
+        @include tablet {
+            font-size: 20px;
+            line-height: 24px;
+        }
     } 
+
     &__price {
         font-weight: 500;
         font-size: 22px;
         line-height: 27px;
     }
     &__remove-cart {
+        min-width: 32px;
         width: 32px;
         height: 32px;
         color: $color-grey-light;
+
+        @include mobile {
+            min-width: 18px;
+            width: 18px;
+            height: 18px;
+            position: absolute;
+            top: 2px;
+            right: 0;
+        }
     }
 }
