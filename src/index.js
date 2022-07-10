@@ -12,6 +12,8 @@ import { startPagination } from './modules/pagination';
 import { getGoods, getGoodsItem } from './modules/goodsService';
 import { renderGoods } from './modules/renderGoods';
 import { renderItem } from './modules/renderItem';
+import { filter } from './modules/filter';
+
 
 
 
@@ -20,12 +22,12 @@ try {
     const goodsList = document.querySelector('.goods__list');
 
     if (goodsList) {
-        const paginationWrapper = document.querySelector('.pagination');
-    
 
-        const pageURL = new URL(location); 
+        const paginationWrapper = document.querySelector('.pagination');
+
+        filter(goodsList, paginationWrapper);
     
-        const page = +pageURL.searchParams.get('page') || 1;
+        // const page = +pageURL.searchParams.get('page') || 1;
     
     
         goodsList.innerHTML = `
@@ -49,19 +51,19 @@ try {
     
         `
     
-        getGoods({page}).then(({goods, pages, page}) => {
+        getGoods().then(({goods, pages, page}) => {
             renderGoods(goodsList, goods, )
             startPagination(paginationWrapper, pages, page);
         })
     
-        startPagination(paginationWrapper, 50, page)
+        // startPagination(paginationWrapper, 50, page)
 
     }
    ;
  
 } catch (error) {
-    console.warn(error);
-    console.warn('Это не главная страница');
+    // console.warn(error);
+    // console.warn('Это не главная страница');
 }
 
 

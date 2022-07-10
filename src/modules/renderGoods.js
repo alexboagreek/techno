@@ -2,6 +2,10 @@
 import { API_URI } from './var';
 export const renderGoods = (wrapper, goods) => {
     wrapper.textContent = '';
+
+    if (!goods.length) {
+        wrapper.innerHTML = '<h2>По вашему запросу ничего не найдено</h2>'
+    }
     
     const cards = goods.map((item) => {
         const li = document.createElement('li');

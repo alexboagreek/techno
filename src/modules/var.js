@@ -1,1 +1,3 @@
-export const API_URI = 'http://localhost:3024/';
+export const API_URI = 'http://technoshop-methed.herokuapp.com/';
+
+// const API_SERVER = 'http://localhost:3024/';
